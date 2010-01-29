@@ -1,0 +1,29 @@
+
+
+STEP 1:
+	edit the file /usr/share/vim/vimXX/filetype.vim,
+	or ~/share/vim/vimXX/filetype.vim, if u have no root privilege when installing VIM:
+	(XX -- VIM version number, if u use VIM 7.2, namely XX == 72)
+	add "au BufNewFile,BufRead *.cflow setf cflow",
+	between "augroup filetypedetect" and "augroup END";
+	
+STEP 2:
+	move cflow.vim to /usr/share/vim/vimXX/filetype.vim,
+	or ~/share/vim/vimXX/filetype.vim, same reason.
+
+
+NOTICE:
+	Regard cflow's output as a new language, so the file name suffix should be ".cflow"
+	Just like "cflow -o xxx.cflow"
+	
+SNAPSHOT:
+	cyan	--	functions defined myself
+	red	--	system functions
+	purple	--	variables
+	orange	--	number
+	yellow	--	file name
+	green	--	type keywords in C
+	white	--	something else
+	
+
+Enjoy it

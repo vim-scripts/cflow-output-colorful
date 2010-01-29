@@ -1,0 +1,22 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2950
+
+Regard cflow's output as a new language, thus we could highlight it's output to analyze the source code. so the file name suffix should be ".cflow", just like "cflow -o xxx.cflow" 
+
+
+The snapshot has been in the tarball 
+
+SNAPSHOT: 
+cyan	--	functions defined ourself 
+purple	--	variables defined ourself 
+red	--	system functions 
+black	--	system symbols 
+yellow	--	file name 
+green	--	type keywords in C 
+white	--	something else 
+orange(fg) --	number 
+orange(bg) --	recursive functions 
+
+
+Enjoy it 
+
+
