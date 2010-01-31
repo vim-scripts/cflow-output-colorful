@@ -23,7 +23,7 @@ syn match 	cflowVar	 	"\([[:alpha:]]\|_\)\([[:alnum:]]\|_\)*$"
 syn match 	cflowVar	 	"\([[:alpha:]]\|_\)\([[:alnum:]]\|_\)*\s<"me=e-1
 syn match 	cflowUserFunc 		"\([[:alpha:]]\|_\)\([[:alnum:]]\|_\)*()"me=e-2
 syn match	cflowNumber		"\(\<[[:digit:]]\+\>\|:\d>\)"
-syn match 	cflowSysFunc		"<\([[:alpha:]]\|_\).*/usr/include/.*>"
+syn match 	cflowSysFunc		"<.*/usr/include/.*>"
 syn match	cflowRecursive		"\((R)\|(recursive.*)\)"
 
 syn keyword	cflowSysSym		BUFSIZ
