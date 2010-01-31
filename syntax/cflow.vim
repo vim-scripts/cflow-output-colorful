@@ -1,6 +1,8 @@
 " Vim Cflow's output file
 " Maintainer:	Yang Zhang <imyeyeslove@163.com>
-" Last Change:	2010 Jan 29
+" Last Change:	2010 Jan 31
+
+
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
@@ -1139,7 +1141,7 @@ syn keyword	cflowSysFunc		tolower_l
 syn keyword	cflowSysFunc		__toupper_l
 syn keyword	cflowSysFunc		toupper_l
 syn keyword	cflowSysFunc		setlocale
-syn keyword	cflowSysFunc		lconv *localeconv
+syn keyword	cflowSysFunc		localeconv
 syn keyword	cflowSysFunc		newlocale
 syn keyword	cflowSysFunc		duplocale
 syn keyword	cflowSysFunc		freelocale
@@ -1147,7 +1149,7 @@ syn keyword	cflowSysFunc		uselocale
 syn keyword	cflowSysFunc		__nldbl_nexttowardf
 syn keyword	cflowSysFunc		__REDIRECT_NTH
 syn keyword	cflowSysFunc		__REDIRECT_NTH
-syn keyword	cflowSysFunc		double __REDIRECT_NTH
+syn keyword	cflowSysFunc		__REDIRECT_NTH
 syn keyword	cflowSysFunc		matherr
 syn keyword	cflowSysFunc		matherr
 syn keyword	cflowSysFunc		setjmp
@@ -1326,7 +1328,7 @@ syn keyword	cflowSysFunc		memccpy
 syn keyword	cflowSysFunc		memset
 syn keyword	cflowSysFunc		memcmp
 syn keyword	cflowSysFunc		memchr
-syn keyword	cflowSysFunc		void *memchr
+syn keyword	cflowSysFunc		memchr
 syn keyword	cflowSysFunc		memchr
 syn keyword	cflowSysFunc		rawmemchr
 syn keyword	cflowSysFunc		rawmemchr
@@ -1347,10 +1349,10 @@ syn keyword	cflowSysFunc		strxfrm_l
 syn keyword	cflowSysFunc		strdup
 syn keyword	cflowSysFunc		strndup
 syn keyword	cflowSysFunc		strchr
-syn keyword	cflowSysFunc		char *strchr
+syn keyword	cflowSysFunc		strchr
 syn keyword	cflowSysFunc		strchr
 syn keyword	cflowSysFunc		strrchr
-syn keyword	cflowSysFunc		char *strrchr
+syn keyword	cflowSysFunc		strrchr
 syn keyword	cflowSysFunc		strrchr
 syn keyword	cflowSysFunc		strchrnul
 syn keyword	cflowSysFunc		strchrnul
@@ -1358,10 +1360,10 @@ syn keyword	cflowSysFunc		strchrnul
 syn keyword	cflowSysFunc		strcspn
 syn keyword	cflowSysFunc		strspn
 syn keyword	cflowSysFunc		strpbrk
-syn keyword	cflowSysFunc		char *strpbrk
+syn keyword	cflowSysFunc		strpbrk
 syn keyword	cflowSysFunc		strpbrk
 syn keyword	cflowSysFunc		strstr
-syn keyword	cflowSysFunc		char *strstr
+syn keyword	cflowSysFunc		strstr
 syn keyword	cflowSysFunc		strstr
 syn keyword	cflowSysFunc		strtok
 syn keyword	cflowSysFunc		__strtok_r
@@ -1384,10 +1386,10 @@ syn keyword	cflowSysFunc		bcopy
 syn keyword	cflowSysFunc		bzero
 syn keyword	cflowSysFunc		bcmp
 syn keyword	cflowSysFunc		index
-syn keyword	cflowSysFunc		char *index
+syn keyword	cflowSysFunc		index
 syn keyword	cflowSysFunc		index
 syn keyword	cflowSysFunc		rindex
-syn keyword	cflowSysFunc		char *rindex
+syn keyword	cflowSysFunc		rindex
 syn keyword	cflowSysFunc		rindex
 syn keyword	cflowSysFunc		ffs
 syn keyword	cflowSysFunc		ffsl
@@ -1415,7 +1417,7 @@ syn keyword	cflowSysFunc		atol
 syn keyword	cflowSysFunc		atoll
 syn keyword	cflowSysFunc		strtod
 syn keyword	cflowSysFunc		strtof
-syn keyword	cflowSysFunc		double strtold
+syn keyword	cflowSysFunc		strtold
 syn keyword	cflowSysFunc		strtol
 syn keyword	cflowSysFunc		strtoul
 syn keyword	cflowSysFunc		strtoq
@@ -1428,7 +1430,7 @@ syn keyword	cflowSysFunc		strtoll_l
 syn keyword	cflowSysFunc		strtoull_l
 syn keyword	cflowSysFunc		strtod_l
 syn keyword	cflowSysFunc		strtof_l
-syn keyword	cflowSysFunc		double strtold_l
+syn keyword	cflowSysFunc		strtold_l
 syn keyword	cflowSysFunc		l64a
 syn keyword	cflowSysFunc		a64l
 syn keyword	cflowSysFunc		random
@@ -1449,7 +1451,7 @@ syn keyword	cflowSysFunc		nrand48
 syn keyword	cflowSysFunc		mrand48
 syn keyword	cflowSysFunc		jrand48
 syn keyword	cflowSysFunc		srand48
-syn keyword	cflowSysFunc		short  *seed48
+syn keyword	cflowSysFunc		seed48
 syn keyword	cflowSysFunc		lcong48
 syn keyword	cflowSysFunc		drand48_r
 syn keyword	cflowSysFunc		erand48_r
@@ -1539,10 +1541,10 @@ syn keyword	cflowSysFunc		strftime
 syn keyword	cflowSysFunc		strptime
 syn keyword	cflowSysFunc		strftime_l
 syn keyword	cflowSysFunc		strptime_l
-syn keyword	cflowSysFunc		tm *gmtime
-syn keyword	cflowSysFunc		tm *localtime
-syn keyword	cflowSysFunc		tm *gmtime_r
-syn keyword	cflowSysFunc		tm *localtime_r
+syn keyword	cflowSysFunc		gmtime
+syn keyword	cflowSysFunc		localtime
+syn keyword	cflowSysFunc		gmtime_r
+syn keyword	cflowSysFunc		localtime_r
 syn keyword	cflowSysFunc		asctime
 syn keyword	cflowSysFunc		ctime
 syn keyword	cflowSysFunc		asctime_r
@@ -1563,7 +1565,7 @@ syn keyword	cflowSysFunc		timer_delete
 syn keyword	cflowSysFunc		timer_settime
 syn keyword	cflowSysFunc		timer_gettime
 syn keyword	cflowSysFunc		timer_getoverrun
-syn keyword	cflowSysFunc		tm *getdate
+syn keyword	cflowSysFunc		getdate
 syn keyword	cflowSysFunc		getdate_r
 syn keyword	cflowSysFunc		feclearexcept
 syn keyword	cflowSysFunc		fegetexceptflag
@@ -1654,7 +1656,7 @@ syn keyword	cflowSysFunc		wcwidth
 syn keyword	cflowSysFunc		wcswidth
 syn keyword	cflowSysFunc		wcstod
 syn keyword	cflowSysFunc		wcstof
-syn keyword	cflowSysFunc		double wcstold
+syn keyword	cflowSysFunc		wcstold
 syn keyword	cflowSysFunc		wcstol
 syn keyword	cflowSysFunc		wcstoul
 syn keyword	cflowSysFunc		wcstoll
@@ -1667,7 +1669,7 @@ syn keyword	cflowSysFunc		wcstoll_l
 syn keyword	cflowSysFunc		wcstoull_l
 syn keyword	cflowSysFunc		wcstod_l
 syn keyword	cflowSysFunc		wcstof_l
-syn keyword	cflowSysFunc		double wcstold_l
+syn keyword	cflowSysFunc		wcstold_l
 syn keyword	cflowSysFunc		wcpcpy
 syn keyword	cflowSysFunc		wcpncpy
 syn keyword	cflowSysFunc		open_wmemstream
@@ -2044,10 +2046,10 @@ if version >= 508 || !exists("did_cflow_syntax_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
+  HiLink cflowSysFunc		Comment
   HiLink cflowRecursive		TODO
   HiLink cflowNumber		Number
   HiLink cflowUserFunc		Label
-  HiLink cflowSysFunc		Comment
   HiLink cflowSysSym		Special
   HiLink cflowVar		Include
   HiLink cflowFileName		String
@@ -2058,4 +2060,3 @@ if version >= 508 || !exists("did_cflow_syntax_inits")
 endif
 
 let b:current_syntax = "cflow"
-
